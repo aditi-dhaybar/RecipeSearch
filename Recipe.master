@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Recipe.master.cs" Inherits="Recipe" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel=" shortcut icon " href="~/Images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="flex">
+                <header>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                    <div>
+                        <asp:ImageButton ID="imgbtnLogo" runat="server" ImageUrl="~/Recipe_Warehouse.PNG" Style="width: 240px; height: 90px; padding-bottom: 40px;" AlternateText="Recipe Warehouse" OnClick="ImageButton3_Click" />
+                    </div>
+                    <div>
+                    </div>
+                    <asp:Button ID="btnAppetizer" runat="server" Text="Appetizers" Style="border-radius: 5px; background-color: red; color: white; margin-top: 22px; margin-left: 297px; height: 25px;" BorderStyle="None" OnClick="btnAppetizer_Click" />
+                    <asp:Button ID="btnMainCourse" runat="server" Text="Entrees" Style="border-radius: 5px; background-color: red; color: white; margin-top: 22px; margin-left: 10px; height: 25px;" BorderStyle="None" OnClick="btnMainCourse_Click" />
+                    <asp:Button ID="btnDrinks" runat="server" Text="Drinks" Style="border-radius: 5px; background-color: red; color: white; margin-top: 22px; margin-left: 10px; height: 25px;" BorderStyle="None" OnClick="btnDrinks_Click" />
+                    <asp:Button ID="btnDessert" runat="server" Text="Desserts" Style="border-radius: 5px; background-color: red; color: white; margin-top: 22px; margin-left: 10px; height: 25px;" BorderStyle="None" OnClick="btnDessert_Click" />
+                    <div class="flex">
+                        <div>
+                            <asp:TextBox ID="TbSubscribe" runat="server" BorderColor="Black" Style="border-radius: 5px; width: 240px; height: 20px; margin-left: 120px; margin-top: 20px;" ForeColor="#999999" Font-Italic="True" AutoPostBack="True" OnTextChanged="TbSubscribe_TextChanged"></asp:TextBox>
+                            <asp:Label ID="lblSubscribe" runat="server" Text="You are successfully subscribed to Recipe Warehouse updates!" Visible="False" Style="margin-left: 30px;" ForeColor="#0033CC"></asp:Label>
+                        </div>
+                        <div>
+                            <asp:RequiredFieldValidator Style="margin-left: 120px;" ID="rfvSubScribe" runat="server" ErrorMessage="Please enter your E-mail Address." Display="Dynamic" ControlToValidate="TbSubscribe" ForeColor="#FF5050" ValidationGroup="Subscribe"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator Style="margin-left: 80px;" ID="revSubscribe" runat="server" ErrorMessage="Your Email Address is in the wrong format." ValidationGroup="Subscribe" ControlToValidate="TbSubscribe" Display="Dynamic" ForeColor="#FF5050" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        </div>
+                    </div>
+                    <asp:Button ID="BtnSubscribe" runat="server" Text="Subscribe" Style="border-radius: 5px; background-color: red; color: white; margin-top: 20px; margin-left: 10px; height: 25px;" BorderStyle="None" OnClick="BtnSubscribe_Click" ValidationGroup="Subscribe" />
+                    <asp:Button ID="BtnAboutUs" runat="server" Text="About Us" Style="border-radius: 5px; background-color: red; color: white; margin-top: 20px; margin-left: 10px; height: 25px;" BorderStyle="None" />
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="TlbwSubscribe" runat="server"
+                        TargetControlID="TbSubscribe"
+                        WatermarkText="&nbsp;&nbsp;&nbsp;&nbsp;Enter your Email Address"
+                        WatermarkCssClass="watermarked" />
+                </header>
+                <div class="fl">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" DynamicHoverStyle-BackColor="#CCCCCC" BackColor="Red" BorderColor="#CCCCCC" CssClass="menu" DynamicMenuItemStyle-ForeColor="White" StaticHoverStyle-ForeColor="White" Font-Size="X-Large" ForeColor="White" DynamicMenuItemStyle-BackColor="#999999">
+                        <DynamicHoverStyle BackColor="Red" ForeColor="White"></DynamicHoverStyle>
+                        <StaticMenuItemStyle HorizontalPadding="30" />
+
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Appetizers" Value="Appetizers" NavigateUrl="~/Recipe/Appitizer/Appitizer.aspx">
+                                <asp:MenuItem Text="Avacado" Value="Avacado" NavigateUrl="~/Recipe/Appitizer/Avacado.aspx" />
+                                <asp:MenuItem Text="Caprese" Value="Caprese" NavigateUrl="~/Recipe/Appitizer/Caprese.aspx" />
+                                <asp:MenuItem Text="Eggplant" Value="Eggplant" NavigateUrl="~/Recipe/Appitizer/Eggplant.aspx" />
+                                <asp:MenuItem Text="Rosemary Ranch Chicken" Value="RosemaryRanchChicken" NavigateUrl="~/Recipe/Appitizer/RosemaryRanchChicken.aspx" />
+                                <asp:MenuItem Text="South Western Egg Rolls" Value="SouthWesternEggrolls" NavigateUrl="~/Recipe/Appitizer/SouthWesternEggrolls.aspx" />
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Entrees" Value="Entrees" NavigateUrl="~/Recipe/Entrees/Entrees.aspx">
+                                <asp:MenuItem Text="Baked Garlic Parmesan" Value="BakedGarlicParmesan" NavigateUrl="~/Recipe/Entrees/BakedGarlicParmesan.aspx" />
+                                <asp:MenuItem Text="Chicken Enchiladas" Value="ChickenEnchiladas" NavigateUrl="~/Recipe/Entrees/ChickenEnchiladas.aspx" />
+                                <asp:MenuItem Text="Grilled Salmon" Value="GrilledSalmon" NavigateUrl="~/Recipe/Entrees/GrilledSalmon.aspx" />
+                                <asp:MenuItem Text="Stuffed Peppers" Value="StuffedPeppers" NavigateUrl="~/Recipe/Entrees/StuffedPeppers.aspx" />
+                                <asp:MenuItem Text="Veg Korma" Value="VegKorma" NavigateUrl="~/Recipe/Entrees/VegKorma.aspx" />
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Drinks" Value="Drinks" NavigateUrl="~/Recipe/Drinks/Drinks.aspx">
+                                <asp:MenuItem Text="Apple Banana Smoothie" Value="AppleBananaSmoothie" NavigateUrl="~/Recipe/Drinks/AppleBananaSmoothie.aspx" />
+                                <asp:MenuItem Text="Ginger Honey" Value="GingerHoney" NavigateUrl="~/Recipe/Drinks/GingerHoney.aspx" />
+                                <asp:MenuItem Text="Green Drink" Value="GreenDrink" NavigateUrl="~/Recipe/Drinks/GreenDrink.aspx" />
+                                <asp:MenuItem Text="Minty Coconut Lime" Value="MintyCoconutLime" NavigateUrl="~/Recipe/Drinks/MintyCoconutLime.aspx" />
+                                <asp:MenuItem Text="Strawberry Shake" Value="StrawberryShake" NavigateUrl="~/Recipe/Drinks/StrawberryShake.aspx" />
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Desserts" Value="Desserts" NavigateUrl="~/Recipe/Desserts/Desserts.aspx">
+                                <asp:MenuItem Text="BlueBerry Crisp" Value="BlueBerryCrisp" NavigateUrl="~/Recipe/Desserts/BlueBerryCrisp.aspx" />
+                                <asp:MenuItem Text="Chocolate Layered Vanilla Pudding Pie" Value="ChocolateLayeredVanillaPuddingPie" NavigateUrl="~/Recipe/Desserts/ChocolateLayeredVanillaPuddingPie.aspx" />
+                                <asp:MenuItem Text="Chocolate PeanutButter Brownies" Value="Chocolatepeanutbutterbrownies" NavigateUrl="~/Recipe/Desserts/Chocolatepeanutbutterbrownies.aspx" />
+                                <asp:MenuItem Text="CranBerry Orange Cookie" Value="CranBerryOrangeCookie" NavigateUrl="~/Recipe/Desserts/CranBerryOrangeCookie.aspx" />
+                                <asp:MenuItem Text="Fruit Salad" Value="FruitSalad" NavigateUrl="~/Recipe/Desserts/FruitSalad.aspx" />
+                            </asp:MenuItem>
+
+
+
+                            <asp:MenuItem Text="About Us" Value="AboutUs" NavigateUrl="~/About.aspx" />
+                            <asp:MenuItem Text="Yummly Recipe Search" Value="YummlySearchRecipe" NavigateUrl="~/YummlySearchRecipe.aspx" />
+
+                        </Items>
+                        <StaticItemTemplate>
+                            <%# Eval("Text") %>
+                        </StaticItemTemplate>
+                    </asp:Menu>
+                </div>
+                <div class="fl" style="margin-top: 10px;">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="ProjectFood" CssClass="menu2" ForeColor="Red" Font-Italic="True" Font-Bold="True" Font-Size="Larger" RootNodeStyle-ForeColor="#FF3300" CurrentNodeStyle-ForeColor="#FF3300" NodeStyle-ForeColor="Red"></asp:SiteMapPath>
+                </div>
+                <article class="article_appetizer">
+                    <div class="search" style="margin-left: 150px;">
+                        <div>
+                            <asp:TextBox ID="TbSearch" runat="server" BorderColor="Black" Style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 650px; height: 42px; margin-left: 100px; margin-top: 25px;" Font-Bold="True" Font-Italic="True" ForeColor="#999999" AutoPostBack="True" onkeyup="this.value = this.value.toUpperCase();" OnTextChanged="TbSearch_TextChanged">&nbsp;&nbsp;Search for a Recipe</asp:TextBox>
+                            <asp:Button ID="bTNSearch" runat="server" Text="SEARCH" Style="border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: red; color: white; margin-top: 25px; height: 48px; width: 100px;" BorderStyle="None" OnClick="bTNSearch_Click" />
+                        </div>
+                        <div>
+                            <asp:Label ID="lblSearcchError" runat="server" Style="font-weight: bold; margin-left: 100px; background-color: white;" Text="Recipe Not Found...Please try another Recipe!" Visible="False" ForeColor="#FF5050"></asp:Label>
+                        </div>
+                        <ajaxToolkit:TextBoxWatermarkExtender ID="TlbwSearch" runat="server"
+                            TargetControlID="TbSearch"
+                            WatermarkText="&nbsp;&nbsp;Search for a Recipe"
+                            WatermarkCssClass="watermarked" />
+                    </div>
+                    <hr class="borderbetweensearch" />
+                    <asp:ContentPlaceHolder ID="RecipeBody" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <footer style="border-top: 2px dashed black;">
+                        &copy Team 11 <a href="https://twitter.com">
+                            <img src="../../Images/Twitter.png" style="margin-left: 1100px; margin-top: 5px; width: 20px; height: 20px;" /></a>
+                        <a href="https://linkedIn.com">
+                            <img src="../../Images//LinkedIn.png" style="margin-left: 20px; width: 20px; height: 20px; margin-top: 5px;" /></a>
+                        <a href="https://instagram.com">
+                            <img src="../../Images/instagram.png" style="margin-left: 20px; width: 20px; height: 20px; margin-top: 5px;" /></a>
+                        <a href="https://facebook.com">
+                            <img src="../../Images/facebook.png" style="margin-left: 20px; width: 20px; height: 20px; margin-top: 5px;" /></a>
+                    </footer>
+                </article>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

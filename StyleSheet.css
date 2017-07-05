@@ -1,0 +1,53 @@
+﻿.search {
+    display: flex;
+    flex-direction: row;
+    margin-left: 400px;
+    color: red;
+}
+.total{
+    height:550px;
+    display :flex ;
+    flex-direction: column ;
+    
+
+}
+.iteminfo {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0.50px;
+    margin-left: 0.50px;
+     background-color : #E55451;
+    color: white;
+    margin-top: 1px;
+}
+
+.iteminfo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    display: flex;
+    width: 200%;
+    height: 200%;
+    zoom: 300%;
+    margin-left: 170px;
+    image-resolution: 300dpi;
+    margin-top: 0.5px;
+}
+
+.section {
+    height: 500px;
+    width: 550px;
+}
+
+.large {
+    
+    font-weight:bold; font-size:20px;
+    font-style: italic;
+    display: flex;
+    margin-left: 520px;
+    margin-right: 450px;
+    color: red;
+    margin-top: 1px;
+}

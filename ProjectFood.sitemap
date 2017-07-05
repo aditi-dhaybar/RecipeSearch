@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="Home">
+        <siteMapNode url="~/Recipe/Appitizer/Appitizer.aspx" title="Appetizers"  description="Appetizers" >
+          <siteMapNode url="~/Recipe/Appitizer/Avacado.aspx" title="Avacado"  description="Avacado" />
+            <siteMapNode url="~/Recipe/Appitizer/Caprese.aspx" title="Caprese"  description="Caprese" />
+           <siteMapNode url="~/Recipe/Appitizer/Eggplant.aspx" title="Eggplant"  description="Eggplant" />
+            <siteMapNode url="~/Recipe/Appitizer/RosemaryRanchChicken.aspx" title="Rosemary Ranch Chicken"  description="RosemaryRanchChicken" />
+           <siteMapNode url="~/Recipe/Appitizer/SouthWesternEggrolls.aspx" title="South Western Eggrolls"  description="SouthWesternEggrolls" />
+        </siteMapNode>
+       <siteMapNode url="~/Recipe/Desserts/Desserts.aspx" title="Desserts"  description="Desserts" >
+          <siteMapNode url="~/Recipe/Desserts/BlueBerryCrisp.aspx" title="BlueBerry Crisp"  description="BlueBerryCrisp" />
+            <siteMapNode url="~/Recipe/Desserts/ChocolateLayeredVanillaPuddingPie.aspx" title="Chocolate Layered Vanilla Pudding Pie"  description="ChocolateLayeredVanillaPuddingPie" />
+           <siteMapNode url="~/Recipe/Desserts/Chocolatepeanutbutterbrownies.aspx" title="Chocolate PeanutButter Brownies"  description="Chocolatepeanutbutterbrownies" />
+            <siteMapNode url="~/Recipe/Desserts/CranBerryOrangeCookie.aspx" title="CranBerry Orange Cookie"  description="CranBerryOrangeCookie" />
+           <siteMapNode url="~/Recipe/Desserts/FruitSalad.aspx" title="Fruit Salad"  description="Fruit Salad" />
+        </siteMapNode>
+ <siteMapNode url="~/Recipe/Drinks/Drinks.aspx" title="Drinks"  description="Drinks" >
+          <siteMapNode url="~/Recipe/Drinks/AppleBananaSmoothie.aspx" title="Apple Banana Smoothie"  description="Apple Banana Smoothie" />
+            <siteMapNode url="~/Recipe/Drinks/GingerHoney.aspx" title="Ginger Honey"  description="Ginger Honey" />
+           <siteMapNode url="~/Recipe/Drinks/GreenDrink.aspx" title="Green Drink"  description="Green Drink" />
+            <siteMapNode url="~/Recipe/Drinks/MintyCoconutLime.aspx" title="Minty Coconut Lime"  description="Minty Coconut Lime" />
+           <siteMapNode url="~/Recipe/Drinks/StrawberryShake.aspx" title="Strawberry Shake"  description="Strawberry Shake" />
+        </siteMapNode>
+       <siteMapNode url="~/Recipe/Entrees/Entrees.aspx" title="Entrees"  description="Entrees" >
+          <siteMapNode url="~/Recipe/Entrees/BakedGarlicParmesan.aspx" title="Baked Garlic Parmesan"  description="Baked Garlic Parmesan" />
+            <siteMapNode url="~/Recipe/Entrees/ChickenEnchiladas.aspx" title="Chicken Enchiladas"  description="Chicken Enchiladas" />
+           <siteMapNode url="~/Recipe/Entrees/GrilledSalmon.aspx" title="Grilled Salmon"  description="Grilled Salmon" />
+            <siteMapNode url="~/Recipe/Entrees/StuffedPeppers.aspx" title="Stuffed Peppers"  description="Stuffed Peppers" />
+           <siteMapNode url="~/Recipe/Entrees/VegKorma.aspx" title="Veg Korma"  description="Veg Korma" />
+        </siteMapNode>
+        <siteMapNode url="About.aspx" title="About Us"  description="AboutUs" />
+    <siteMapNode url="YummlySearchRecipe.aspx" title="Yummly Recipe Search"  description="YummlySearchRecipe" />
+    </siteMapNode>
+</siteMap>
