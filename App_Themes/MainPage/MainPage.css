@@ -1,0 +1,253 @@
+﻿.flex-container,
+.flex-container header,
+.flex-container footer {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.fl {
+    display: flex;
+    flex-direction: column;
+}
+.flex > * {
+    min-width: 100px;
+    min-height: 30px;
+    flex: 1 1 auto;
+      -webkit-transition: width 0.7s ease-out;
+      transition: width 0.7s ease-out;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    height: 75px; 
+}
+
+.search {
+    display: flex;
+    position: center;
+    flex-direction:column;
+}
+
+.article_home {
+    display: flex;
+    position: center;
+    background-image: url(/Images/panorama-kitchen.jpg);
+    height: 200px;
+    flex-direction:column;
+}
+
+.article_appetizer {
+    background-color: grey;
+    height: 100px;
+}
+
+.appetizer {
+    background-color: white;
+    height: 90px;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 45px;
+    background-image: url(/Images/appetizers.jpg);
+ 
+}
+
+/*This is for all image headers*/
+.imageheader {
+    height: 20px;
+}
+/* This if for all images on the Home Page*/
+.image {
+    display: flex;
+}
+aside {
+    background: white;
+    height: 300px;
+}
+
+.asideappetizer {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 230px;
+}
+
+.asidehome {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 1640px;
+}
+
+.asideitem {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 1210px;
+}
+
+footer {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    height: 30px;
+}
+
+.quote {
+    text-align: center;
+    height: 50px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    color: #848B79;
+    font-family: 'Comic Sans MS';
+}
+
+
+.flex-item {
+    display:flex;
+    align-items: center;
+}
+
+.flex-item img {
+    flex-grow:0;
+    flex-shrink:0;
+}
+
+.item-header {
+    display:flex;
+    align-items: center;
+    background-color: black;
+    color: red;
+    font-style: italic;
+    font-size: 40px;
+}
+
+.item-description {
+    text-align: center;
+    vertical-align: middle;
+    font-family: Calibri;
+    font-size: 30px;
+    font-style: italic;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.borderitempage {
+     border:2px solid grey;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 40px;
+}
+
+.borderotheritems {
+    border:2px solid grey;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.nutrition {
+    display: inline; 
+    margin-right: 55px; 
+    font-style: italic;
+    font-family: Calibri;
+    font-weight: bold;
+    color: red;
+}
+.borderbetweensearch {
+    border: 3px solid black;
+    margin-top: 35px;
+}
+
+.borderbetweenitems {
+    border: 2px solid grey;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.ingredients {
+    margin-left: 220px;
+    margin-right: 220px;
+    background-color: #EBDDE2;
+    border: 1px solid red;
+    text-align: left; 
+    vertical-align: middle;
+    margin-top: 43px;
+}
+
+.directions {
+    margin-left: 220px;
+    margin-right: 220px;
+    background-color: #EBDDE2;
+    border: 1px solid red;
+    text-align: left; 
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.facts {
+    margin-left: 177px;
+    height: 15px;
+    margin-right: 210px;
+    background-color: white;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.other-items {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: red;
+    font-style: italic;
+    font-size: 20px;
+    border: 2px solid #E55451;
+}
+
+.meal-course {
+    margin-bottom:0px;
+    color: white; 
+    font-weight: bold; 
+    background: #E55451;
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Bookman Old Style';
+}
+
+.view-all {
+    color: #848B79; 
+    font-weight: bold; 
+    font-size: 18px;
+    margin-left: 1249px;
+    margin-top: -2.14px;
+    border: 2px solid #E55451;
+    border-top-color: white;
+    text-align: center;
+    width: 80px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.menu{
+    display :flex;
+    margin-bottom :1px;
+    margin-top :1px;
+}
+.menu2{
+    display :flex;
+    margin-bottom :0.15px;
+    margin-top :0.15px;
+}
